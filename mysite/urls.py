@@ -18,6 +18,5 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('webapp/', include('webapp.urls')),
-    path('', include('personal.urls')) #no particular path
+    path('', include('personal.urls')) #no particular path to access this app
 ]

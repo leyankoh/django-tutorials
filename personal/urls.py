@@ -1,6 +1,7 @@
-from django.conf.urls import re_path
 from . import views
+from django.urls import path
 
+app_name = 'personal'
 urlpatterns = [
-    re_path("", views.index, name='index')
+    path("", views.homepage, name="homepage")
 ]
