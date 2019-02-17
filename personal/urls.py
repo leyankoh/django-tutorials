@@ -5,4 +5,5 @@ app_name = 'personal'
 urlpatterns = [
     path("", views.homepage, name="homepage"),
     path('books/', views.books, name='books'),
+    path('register/', views.register, name="register")
 ]

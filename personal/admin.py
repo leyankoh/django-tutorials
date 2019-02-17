@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Tutorial, Books
+from .models import Tutorial, Books, Post
 from tinymce.widgets import TinyMCE
 from django.db import models
 
@@ -22,6 +22,14 @@ class TutorialAdmin(admin.ModelAdmin):
         models.TextField: {'widget': TinyMCE()}
     }
 
+class PostAdmin(admin.ModelAdmin):
+
+    formfield_overrides = {
+        models.TextField: {'widget': TinyMCE()}
+    }
+
 admin.site.register(Tutorial, TutorialAdmin)
 
 admin.site.register(Books)
+
+admin.site.register(Post, PostAdmin)
